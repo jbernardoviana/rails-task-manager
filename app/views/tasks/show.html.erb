@@ -1,0 +1,11 @@
+<h1>Tasks#show</h1>
+<p>Find me in app/views/tasks/show.html.erb</p>
+
+<!-- Shows individual tasks -->
+<!-- it's rendered by the controller on the show action -->
+<h1>Task - <%= @task.name %></h1>
+<p>Date -> <%= @task.date %></p>
+<p>Done? -> <%= @task.check %></p>
+
+<%= link_to 'List All', tasks_path %>
+<%= link_to 'Delete', delete_task_path(id: @task.id), method: :delete %>

@@ -1,0 +1,13 @@
+<h1>Tasks#new</h1>
+<p>Find me in app/views/tasks/new.html.erb</p>
+
+<!-- New -->
+<!-- It stores the inputs in an object task -->
+<%= form_for @task do |t| %>
+  <%= t.text_field :name, placeholder: 'Name' %>
+  <%= t.datetime_local_field :date, placeholder: 'date' %>
+  <%= t.check_box(:check) %>
+  <%= t.submit %>
+<% end %>
+
+<!-- It will store the input values in the form: task{ name: ..., date: ..., check: ... } -->
